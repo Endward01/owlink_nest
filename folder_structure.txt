@@ -1,0 +1,21 @@
+owling_nest/
+│
+├── src/
+│   ├── components/        # Reusable components (e.g., modules, classes)
+│   ├── services/          # API calls and business logic
+│   ├── utils/             # Utility functions
+│   ├── types/             # Type definitions (if needed)
+│   ├── styles/            # CSS files or styles
+│   ├── index.ts           # Entry point of the application
+│   └── app.ts             # Main application logic
+│
+├── public/                # Static files (e.g., index.html, images)
+│   └── index.html
+│
+├── tests/                 # Test files (if not colocated with components)
+│   └── app.test.ts
+│
+├── .gitignore             # Git ignore file
+├── package.json           # Project metadata and dependencies
+├── tsconfig.json          # TypeScript configuration
+└── README.md              # Project documentation
