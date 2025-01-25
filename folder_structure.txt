@@ -5,7 +5,6 @@ owling_nest/
 │   ├── services/          # API calls and business logic
 │   ├── utils/             # Utility functions
 │   ├── types/             # Type definitions (if needed)
-│   ├── styles/            # CSS files or styles
 │   ├── index.ts           # Entry point of the application
 │   └── app.ts             # Main application logic
 │

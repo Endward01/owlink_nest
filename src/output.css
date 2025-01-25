@@ -527,6 +527,27 @@
   .relative {
     position: relative;
   }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
   .block {
     display: block;
   }
@@ -538,6 +559,78 @@
   }
   .table {
     display: table;
+  }
+  .h-1 {
+    height: calc(var(--spacing) * 1);
+  }
+  .h-1\/10 {
+    height: calc(1/10 * 100%);
+  }
+  .h-3 {
+    height: calc(var(--spacing) * 3);
+  }
+  .h-3\/100 {
+    height: calc(3/100 * 100%);
+  }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
+  .h-5\/100 {
+    height: calc(5/100 * 100%);
+  }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
+  .h-7\/100 {
+    height: calc(7/100 * 100%);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
+  .h-8\/10 {
+    height: calc(8/10 * 100%);
+  }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
+  .h-9\/10 {
+    height: calc(9/10 * 100%);
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+  .h-90 {
+    height: calc(var(--spacing) * 90);
+  }
+  .h-90\/100 {
+    height: calc(90/100 * 100%);
+  }
+  .h-94 {
+    height: calc(var(--spacing) * 94);
+  }
+  .h-94\/100 {
+    height: calc(94/100 * 100%);
+  }
+  .h-95 {
+    height: calc(var(--spacing) * 95);
+  }
+  .h-95\/10 {
+    height: calc(95/10 * 100%);
+  }
+  .h-95\/100 {
+    height: calc(95/100 * 100%);
+  }
+  .h-fit {
+    height: fit-content;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .h-lvh {
+    height: 100lvh;
+  }
+  .w-16 {
+    width: calc(var(--spacing) * 16);
   }
   .border-collapse {
     border-collapse: collapse;
@@ -555,8 +648,14 @@
   .bg-pink-500 {
     background-color: var(--color-pink-500);
   }
-  .bg-pink-700 {
-    background-color: var(--color-pink-700);
+  .bg-purple-600 {
+    background-color: var(--color-purple-600);
+  }
+  .bg-slate-500 {
+    background-color: var(--color-slate-500);
+  }
+  .bg-slate-600 {
+    background-color: var(--color-slate-600);
   }
   .underline {
     text-decoration-line: underline;
