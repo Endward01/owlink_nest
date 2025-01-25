@@ -12,6 +12,9 @@ owling_nest/
 ├── public/                # Static files (e.g., index.html, images)
 │   └── index.html
 │
+├── dist/                 # Compiled TS code into JS
+│   └── index.js
+│
 ├── tests/                 # Test files (if not colocated with components)
 │   └── app.test.ts
 │
