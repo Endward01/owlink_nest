@@ -1,5 +1,6 @@
+import { elemColor } from "../services/color.js";
 export const createFooter = (parent) => {
     const footer = document.createElement("footer");
-    footer.classList.add("bg-slate-500", "h-3/100");
+    footer.classList.add(elemColor, "p-2", "mb-2", "rounded-lg", "shadow-lg");
     parent.appendChild(footer);
 };
