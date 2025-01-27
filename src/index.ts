@@ -3,8 +3,9 @@ import { createSection } from "./components/section.js";
 import { createFooter } from "./components/footer.js";
 import { changeTitle } from "./services/changePageTitle.js";
 import { bgColor } from "./services/color.js";
+import { createAddBookmark } from "./components/addBookmark.js";
 
-const htmlBody: any = document.querySelector("body");
+export const htmlBody: any = document.querySelector("body");
 htmlBody.classList.add(
   "h-lvh",
   "container",
@@ -13,6 +14,7 @@ htmlBody.classList.add(
   "overflow-hidden",
   "flex",
   "flex-col",
+  "relative",
 );
 
 createNavbar(htmlBody);
