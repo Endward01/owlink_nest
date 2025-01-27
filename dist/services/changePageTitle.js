@@ -14,7 +14,6 @@ export const changeTitle = () => __awaiter(void 0, void 0, void 0, function* () 
         const response = yield fetch(url);
         const data = yield response.json();
         document.title = `${data.text} - Owlink Nest`;
-        console.log(data.text);
         return;
     }
     catch (error) {
