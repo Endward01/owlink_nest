@@ -5,6 +5,7 @@ export const createNavbarMenuButton = (parent: HTMLElement, icon: string) => {
     "p-1",
     "rounded-lg",
     "hover:bg-slate-600",
+    "cursor-pointer",
   );
   navbarBtn.innerHTML += icon;
   parent.appendChild(navbarBtn);

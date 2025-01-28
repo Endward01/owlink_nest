@@ -12,7 +12,7 @@ export const createAddBookmark = (parent) => {
     nameInput.setAttribute("id", "addName");
     nameInput.setAttribute("name", "addName");
     nameInput.setAttribute("type", "text");
-    nameInput.classList.add("p-2", "mb-2", "rounded-lg", bgColor, "inset-shadow-sm");
+    nameInput.classList.add("p-2", "mb-2", "rounded-lg", bgColor, "inset-shadow-sm", `focus-visible:${textColor}`, "focus-visible:outline");
     form.appendChild(nameInput);
     const urlLabel = document.createElement("label");
     urlLabel.innerText += "Url";
@@ -23,10 +23,10 @@ export const createAddBookmark = (parent) => {
     urlInput.setAttribute("id", "addUrl");
     urlInput.setAttribute("name", "addUrl");
     urlInput.setAttribute("type", "text");
-    urlInput.classList.add("p-2", "mb-2", "rounded-lg", bgColor, "inset-shadow-sm");
+    urlInput.classList.add("p-2", "mb-2", "rounded-lg", bgColor, "inset-shadow-sm", `focus-visible:${textColor}`, "focus-visible:outline");
     form.appendChild(urlInput);
     const addBtm = document.createElement("button");
-    addBtm.classList.add("p-2", "mt-2", "rounded-lg", bgColor, "w-7/10", "mx-auto");
+    addBtm.classList.add("p-2", "mt-2", "rounded-lg", bgColor, "w-7/10", "mx-auto", `hover:${textColor}`, "hover:outline", `focus-visible:${textColor}`, "focus-visible:outline", "cursor-pointer");
     addBtm.innerText += "Add Bookmark";
     form.appendChild(addBtm);
     parent.appendChild(form);

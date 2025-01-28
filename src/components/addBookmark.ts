@@ -36,6 +36,8 @@ export const createAddBookmark = (parent: HTMLElement) => {
     "rounded-lg",
     bgColor,
     "inset-shadow-sm",
+    `focus-visible:${textColor}`,
+    "focus-visible:outline",
   );
 
   form.appendChild(nameInput);
@@ -56,6 +58,8 @@ export const createAddBookmark = (parent: HTMLElement) => {
     "rounded-lg",
     bgColor,
     "inset-shadow-sm",
+    `focus-visible:${textColor}`,
+    "focus-visible:outline",
   );
 
   form.appendChild(urlInput);
@@ -68,6 +72,11 @@ export const createAddBookmark = (parent: HTMLElement) => {
     bgColor,
     "w-7/10",
     "mx-auto",
+    `hover:${textColor}`,
+    "hover:outline",
+    `focus-visible:${textColor}`,
+    "focus-visible:outline",
+    "cursor-pointer",
   );
 
   addBtm.innerText += "Add Bookmark";
