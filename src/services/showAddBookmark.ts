@@ -1,11 +1,11 @@
 import { createAddBookmark } from "../components/addBookmark.js";
-import { htmlBody } from "../index.js";
+import { div, htmlBody } from "../index.js";
 
 export const showAddBookmark = (parent: HTMLElement) => {
   parent.childNodes[0].addEventListener("click", () => {
-    console.log(document.querySelector("[data-addform-visible]"));
+    // console.log(document.querySelector("[data-addform-visible]"));
     if (document.querySelector("[data-addform-visible]") === null) {
-      createAddBookmark(htmlBody);
+      createAddBookmark(div);
     } else {
       const element: any = document.querySelector("[data-addform-visible]");
       element.style.opacity = 0;

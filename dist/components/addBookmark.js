@@ -1,7 +1,7 @@
 import { bgColor, elemColor, textColor } from "../services/color.js";
 export const createAddBookmark = (parent) => {
     const form = document.createElement("form");
-    form.classList.add("absolute", "flex", "flex-col", "top-16", "right-0", elemColor, "p-2", "rounded-lg", "shadow-lg", textColor, "transition", "ease-in-out", "duration-150", "animate-(--animate-fade-in-scale)");
+    form.classList.add("absolute", "flex", "flex-col", "top-16", "right-2", elemColor, "p-2", "rounded-lg", "shadow-lg", textColor, "transition", "ease-in-out", "duration-150", "animate-(--animate-fade-in-scale)");
     form.setAttribute("data-addForm-visible", "");
     const nameLabel = document.createElement("label");
     nameLabel.innerText += "Title";

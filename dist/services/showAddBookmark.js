@@ -1,10 +1,9 @@
 import { createAddBookmark } from "../components/addBookmark.js";
-import { htmlBody } from "../index.js";
+import { div } from "../index.js";
 export const showAddBookmark = (parent) => {
     parent.childNodes[0].addEventListener("click", () => {
-        console.log(document.querySelector("[data-addform-visible]"));
         if (document.querySelector("[data-addform-visible]") === null) {
-            createAddBookmark(htmlBody);
+            createAddBookmark(div);
         }
         else {
             const element = document.querySelector("[data-addform-visible]");

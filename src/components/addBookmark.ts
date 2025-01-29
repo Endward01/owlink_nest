@@ -7,7 +7,7 @@ export const createAddBookmark = (parent: HTMLElement) => {
     "flex",
     "flex-col",
     "top-16",
-    "right-0",
+    "right-2",
     elemColor,
     "p-2",
     "rounded-lg",
