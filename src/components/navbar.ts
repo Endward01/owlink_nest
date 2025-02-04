@@ -5,14 +5,16 @@ import { createNavbarMenu } from "./navbar-menu.js";
 export const createNavbar = (parent: HTMLElement) => {
   const navbar = document.createElement("nav");
   navbar.classList.add(
-    elemColor,
+    "bg-(--bg-trans-25)",
+    "backdrop-blur-(--blur-mica)",
     "flex",
     "justify-between",
     "items-center",
     "p-2",
-    "mt-2",
+    "m-2",
     "rounded-lg",
-    "shadow-lg",
+    "shadow-(--box-shadow-main)",
+    "z-2",
   );
   navbar.setAttribute("role", "navigation");
   createNavbarBrand(navbar);
