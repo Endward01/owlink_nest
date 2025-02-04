@@ -4,29 +4,36 @@ import { createFooter } from "./components/footer.js";
 import { changeTitle } from "./services/changePageTitle.js";
 import { bgColor } from "./services/color.js";
 import { createAddBookmark } from "./components/addBookmark.js";
+import { createSettings } from "./components/settings.js";
+import { createBackground } from "./components/background.js";
 
 export const htmlBody: any = document.querySelector("body");
 htmlBody.classList.add("h-lvh", "flex", bgColor);
 export const div: HTMLElement = document.createElement("div");
 div.classList.add(
   "flex",
+  "justify-between",
   "grow",
   "container",
   "mx-auto",
-  bgColor,
+  // bgColor,
   "overflow-hidden",
   "flex",
   "flex-col",
   "relative",
-  "shadow-[box-shadow:rgba(50,50,93,0.25)0px_30px_60px_-12px_inset,rgba(0,0,0,0.3)_0px_18px_36px_-18px_inset;]",
+  "shadow-(--box-shadow-inset-main)",
   "rounded-lg",
-  "px-2",
+  // "px-2",
   "my-2",
+  "relative",
+  "z-2",
+  // "backdrop-grayscale-25",
 );
 htmlBody.appendChild(div);
 
 createNavbar(div);
 createSection(div);
 createFooter(div);
+createBackground(htmlBody);
 
 changeTitle();

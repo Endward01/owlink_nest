@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 @theme {
+    --bg-trans-25: rgba(0, 0, 0, 0.25);
+    --blur-mica: 40px;
+    --box-shadow-main: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --box-shadow-inset-main: 0 0 10px rgba(13, 13, 13, 1) inset,
+        0 0 1px RGBA(0, 0, 0, 1);
+    --box-shadow-inset-main-50: 0 0 5px rgba(13, 13, 13, 1) inset,
+        0 0 1px RGBA(0, 0, 0, 1);
+
     --animate-fade-in-scale: fade-in-scale 0.15s ease-in-out;
     @keyframes fade-in-scale {
         0% {

@@ -1,7 +1,11 @@
-import { bgColor, elemColor, textColor } from "../services/color.js";
+import { addBookmarkService } from "../services/addBookmarksService.js";
+import { bgColor, textColor } from "../services/color.js";
 export const createAddBookmark = (parent) => {
     const form = document.createElement("form");
-    form.classList.add("absolute", "flex", "flex-col", "top-16", "right-2", elemColor, "p-2", "rounded-lg", "shadow-lg", textColor, "transition", "ease-in-out", "duration-150", "animate-(--animate-fade-in-scale)");
+    form.onsubmit = (event) => {
+        addBookmarkService(nameInput, urlInput, event);
+    };
+    form.classList.add("absolute", "flex", "flex-col", "top-16", "right-0", "w-xs", "bg-(--bg-trans-25)", "backdrop-blur-(--blur-mica)", "p-2", "mx-2", "rounded-lg", "shadow-(--box-shadow-main)", textColor, "transition", "ease-in-out", "duration-150", "animate-(--animate-fade-in-scale)");
     form.setAttribute("data-addForm-visible", "");
     const nameLabel = document.createElement("label");
     nameLabel.innerText += "Title";
@@ -12,7 +16,7 @@ export const createAddBookmark = (parent) => {
     nameInput.setAttribute("id", "addName");
     nameInput.setAttribute("name", "addName");
     nameInput.setAttribute("type", "text");
-    nameInput.classList.add("p-2", "mb-2", "rounded-lg", bgColor, "inset-shadow-sm", `focus-visible:${textColor}`, "focus-visible:outline");
+    nameInput.classList.add("p-2", "mb-2", "rounded-lg", "shadow-(--box-shadow-inset-main-50)", `focus-visible:${textColor}`, "focus-visible:outline");
     form.appendChild(nameInput);
     const urlLabel = document.createElement("label");
     urlLabel.innerText += "Url";
@@ -23,10 +27,11 @@ export const createAddBookmark = (parent) => {
     urlInput.setAttribute("id", "addUrl");
     urlInput.setAttribute("name", "addUrl");
     urlInput.setAttribute("type", "text");
-    urlInput.classList.add("p-2", "mb-2", "rounded-lg", bgColor, "inset-shadow-sm", `focus-visible:${textColor}`, "focus-visible:outline");
+    urlInput.classList.add("p-2", "mb-2", "rounded-lg", "shadow-(--box-shadow-inset-main-50)", `focus-visible:${textColor}`, "focus-visible:outline");
     form.appendChild(urlInput);
-    const addBtm = document.createElement("button");
+    const addBtm = document.createElement("input");
     addBtm.classList.add("p-2", "mt-2", "rounded-lg", bgColor, "w-7/10", "mx-auto", `hover:${textColor}`, "hover:outline", `focus-visible:${textColor}`, "focus-visible:outline", "cursor-pointer");
+    addBtm.setAttribute("type", "submit");
     addBtm.innerText += "Add Bookmark";
     form.appendChild(addBtm);
     parent.appendChild(form);
