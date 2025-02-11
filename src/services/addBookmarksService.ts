@@ -1,6 +1,6 @@
 export const addBookmarkService = (
-  title: HTMLElement,
-  url: HTMLElement,
+  title: HTMLFormElement,
+  url: HTMLFormElement,
   event: Event,
 ) => {
   event.preventDefault();

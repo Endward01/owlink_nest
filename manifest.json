@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Owlinl Nest",
+  "short_name": "owlink",
+  "version": "0.1",
+  "author": "Daniel Prętki",
+  "description": "This extension replaces your browser's new page and home page which presents your links as a clean, simple list.",
+  "icons": {
+    "96": "favicon/favicon-32x32.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "public/index.html"
+  },
+  "permissions": ["activeTab", "bookmarks"]
+}
