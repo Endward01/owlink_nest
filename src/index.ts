@@ -2,7 +2,7 @@ import { createNavbar } from "./components/navbar.js";
 import { createSection } from "./components/section.js";
 import { createFooter } from "./components/footer.js";
 import { changeTitle } from "./services/changePageTitle.js";
-import { bgColor } from "./services/color.js";
+import { bgColor, textColor } from "./services/color.js";
 import { createAddBookmark } from "./components/addBookmark.js";
 import { createSettings } from "./components/settings.js";
 import { createBackground } from "./components/background.js";
@@ -29,6 +29,7 @@ div.classList.add(
   "relative",
   "z-2",
   // "backdrop-grayscale-25",
+  textColor,
 );
 htmlBody.appendChild(div);
 

@@ -1,7 +1,7 @@
 export const createBackgroundImage = (parent: HTMLElement) => {
   const div = document.createElement("div");
   div.classList.add(
-    // "bg-[url(https://picsum.photos/1920/1080?blur)]",
+    "bg-[url(https://picsum.photos/1920/1080?blur)]",
     "w-full",
     "h-full",
     "bg-cover",
