@@ -4,8 +4,7 @@ import { div, htmlBody } from "../index.js";
 
 export const showAddBookmark = (parent: HTMLElement) => {
   parent.childNodes[0].addEventListener("click", () => {
-    // console.log(document.querySelector("[data-addform-visible]"));
-    const section: HTMLElement = document.querySelector("section");
+    const section: HTMLElement | null = document.querySelector("section");
     if (document.querySelector("[data-addform-visible]") === null) {
       createAddBookmark(section);
     } else {
