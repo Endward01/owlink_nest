@@ -636,6 +636,9 @@
   .h-7\/100 {
     height: calc(7/100 * 100%);
   }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
   .h-full {
     height: 100%;
   }
