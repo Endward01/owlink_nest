@@ -6,7 +6,6 @@ import { bgColor, textColor } from "./services/color.js";
 import { createAddBookmark } from "./components/addBookmark.js";
 import { createSettings } from "./components/settings.js";
 import { createBackground } from "./components/background.js";
-import { getBookmarksFromBrowser } from "./services/getBookmarksFromBrowser.js";
 
 export const htmlBody: any = document.querySelector("body");
 htmlBody.classList.add("h-lvh", "flex", bgColor);
@@ -39,5 +38,3 @@ createFooter(div);
 createBackground(htmlBody);
 
 changeTitle();
-
-getBookmarksFromBrowser();

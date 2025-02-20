@@ -2,7 +2,7 @@ import { addBookmarkService } from "../services/addBookmarksService.js";
 import { bgColor, elemColor, textColor } from "../services/color.js";
 
 export const createAddBookmark = (parent: HTMLElement) => {
-  const form = document.createElement("form");
+  const form: HTMLElement = document.createElement("form");
 
   form.onsubmit = (event) => {
     addBookmarkService(nameInput, urlInput, event);
@@ -29,13 +29,13 @@ export const createAddBookmark = (parent: HTMLElement) => {
   );
   form.setAttribute("data-addForm-visible", "");
 
-  const nameLabel = document.createElement("label");
+  const nameLabel: HTMLElement = document.createElement("label");
   nameLabel.innerText += "Title";
   nameLabel.setAttribute("for", "addName");
   nameLabel.classList.add("pl-2");
   form.appendChild(nameLabel);
 
-  const nameInput = document.createElement("input");
+  const nameInput: HTMLInputElement = document.createElement("input");
   nameInput.setAttribute("id", "addName");
   nameInput.setAttribute("name", "addName");
   nameInput.setAttribute("type", "text");
@@ -51,13 +51,13 @@ export const createAddBookmark = (parent: HTMLElement) => {
 
   form.appendChild(nameInput);
 
-  const urlLabel = document.createElement("label");
+  const urlLabel: HTMLElement = document.createElement("label");
   urlLabel.innerText += "Url";
   urlLabel.setAttribute("for", "addUrl");
   urlLabel.classList.add("pl-2");
   form.appendChild(urlLabel);
 
-  const urlInput = document.createElement("input");
+  const urlInput: HTMLInputElement = document.createElement("input");
   urlInput.setAttribute("id", "addUrl");
   urlInput.setAttribute("name", "addUrl");
   urlInput.setAttribute("type", "text");
