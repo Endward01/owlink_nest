@@ -1,4 +1,5 @@
-export const textColor: string = "text-stone-50";
+export const textColor: string = "#fafaf9";
 export const strokeColor: string = "stroke-stone-50";
-export const bgColor: string = "bg-slate-600";
-export const elemColor: string = "bg-slate-500";
+export const bgColor: string = "#232629";
+export const elemColor: string = "#1d1c1a";
+export const accentColor: string = "#926ee4";

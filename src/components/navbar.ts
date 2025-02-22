@@ -5,8 +5,9 @@ import { createNavbarMenu } from "./navbar-menu.js";
 export const createNavbar = (parent: HTMLElement) => {
   const navbar = document.createElement("nav");
   navbar.classList.add(
-    "bg-(--bg-trans-25)",
-    "backdrop-blur-(--blur-mica)",
+    // "bg-(--bg-trans-25)",
+    // "backdrop-blur-(--blur-mica)",
+    "bg-[" + elemColor + "]",
     "flex",
     "justify-between",
     "items-center",

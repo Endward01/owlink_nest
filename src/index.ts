@@ -8,7 +8,7 @@ import { createSettings } from "./components/settings.js";
 import { createBackground } from "./components/background.js";
 
 export const htmlBody: any = document.querySelector("body");
-htmlBody.classList.add("h-lvh", "flex", bgColor);
+htmlBody.classList.add("h-lvh", "flex", "bg-[" + bgColor + "]");
 export const div: HTMLElement = document.createElement("div");
 div.classList.add(
   "flex",
@@ -16,6 +16,7 @@ div.classList.add(
   "grow",
   "container",
   "mx-auto",
+
   // bgColor,
   "overflow-hidden",
   "flex",
@@ -28,7 +29,7 @@ div.classList.add(
   "relative",
   "z-2",
   // "backdrop-grayscale-25",
-  textColor,
+  "text-[" + textColor + "]",
 );
 htmlBody.appendChild(div);
 

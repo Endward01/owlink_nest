@@ -4,9 +4,10 @@ import { createNavbarMenuButton } from "./navbar-menu-button.js";
 export const createFooter = (parent: HTMLElement) => {
   const footer = document.createElement("footer");
   footer.classList.add(
-    "bg-(--bg-trans-25)",
-    "backdrop-blur-(--blur-mica)",
-    textColor,
+    // "bg-(--bg-trans-25)",
+    // "backdrop-blur-(--blur-mica)",
+    "bg-[" + elemColor + "]",
+    // "text-[" + textColor + "]",
     "p-2",
     "m-2",
     "rounded-lg",
