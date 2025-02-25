@@ -8,6 +8,7 @@ export const createNavbarBrand = (parent: HTMLElement) => {
     "items-center",
     "gap-2",
     "px-1",
+    "drop-shadow-(--box-shadow-main)",
   );
 
   const brandImg = document.createElement("img");
@@ -17,7 +18,7 @@ export const createNavbarBrand = (parent: HTMLElement) => {
   navbarBrand.appendChild(brandImg);
 
   const brandText = document.createElement("H2");
-  brandText.classList.add("h-5/10", textColor);
+  brandText.classList.add("h-5/10", "text-lg", "font-medium");
   brandText.innerHTML += "Owlink Nest";
 
   navbarBrand.appendChild(brandText);

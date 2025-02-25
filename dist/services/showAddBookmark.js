@@ -3,7 +3,9 @@ export const showAddBookmark = (parent) => {
     parent.childNodes[0].addEventListener("click", () => {
         const section = document.querySelector("section");
         if (document.querySelector("[data-addform-visible]") === null) {
-            createAddBookmark(section);
+            if (section !== null) {
+                createAddBookmark(section);
+            }
         }
         else {
             const element = document.querySelector("[data-addform-visible]");

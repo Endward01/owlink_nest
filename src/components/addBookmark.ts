@@ -1,5 +1,4 @@
 import { addBookmarkService } from "../services/addBookmarksService.js";
-import { bgColor, elemColor, textColor } from "../services/color.js";
 
 export const createAddBookmark = (parent: HTMLElement) => {
   const form: HTMLElement = document.createElement("form");
@@ -9,19 +8,21 @@ export const createAddBookmark = (parent: HTMLElement) => {
   };
 
   form.classList.add(
+    "primary",
+    "back",
     "absolute",
     "flex",
     "flex-col",
     "top-16",
     "right-0",
     "w-xs",
-    "bg-(--bg-trans-25)",
-    "backdrop-blur-(--blur-mica)",
+
+    // "bg-(--bg-trans-25)",
+    // "backdrop-blur-(--blur-mica)",
     "p-2",
     "mx-2",
     "rounded-lg",
     "shadow-(--box-shadow-main)",
-    textColor,
     "transition",
     "ease-in-out",
     "duration-150",
@@ -43,10 +44,8 @@ export const createAddBookmark = (parent: HTMLElement) => {
     "p-2",
     "mb-2",
     "rounded-lg",
-    // bgColor,
     "shadow-(--box-shadow-inset-main-50)",
-    `focus-visible:${textColor}`,
-    "focus-visible:outline",
+    // "focus-visible:outline",
   );
 
   form.appendChild(nameInput);
@@ -65,10 +64,9 @@ export const createAddBookmark = (parent: HTMLElement) => {
     "p-2",
     "mb-2",
     "rounded-lg",
-    // bgColor,
+    // "bg-[" + bgColor + "]",
     "shadow-(--box-shadow-inset-main-50)",
-    `focus-visible:${textColor}`,
-    "focus-visible:outline",
+    // "focus-visible:outline-[" + textColor + "]",
   );
 
   form.appendChild(urlInput);
@@ -76,16 +74,19 @@ export const createAddBookmark = (parent: HTMLElement) => {
   const addBtm: HTMLElement = document.createElement("input");
 
   addBtm.classList.add(
+    "tertiary",
     "p-2",
     "mt-2",
     "rounded-lg",
-    bgColor,
+    // "bg-[" + bgColor + "]",
+    // "active:bg-[" + elemColor + "]",
+
     "w-7/10",
     "mx-auto",
-    `hover:${textColor}`,
-    "hover:outline",
-    `focus-visible:${textColor}`,
-    "focus-visible:outline",
+    // `hover:${textColor}`,
+    // "hover:outline",
+    // `focus-visible:${textColor}`,
+    // "focus-visible:outline",
     "cursor-pointer",
   );
   addBtm.setAttribute("type", "submit");

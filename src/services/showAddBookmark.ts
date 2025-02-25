@@ -6,7 +6,9 @@ export const showAddBookmark = (parent: HTMLElement) => {
   parent.childNodes[0].addEventListener("click", () => {
     const section: HTMLElement | null = document.querySelector("section");
     if (document.querySelector("[data-addform-visible]") === null) {
-      createAddBookmark(section);
+      if (section !== null) {
+        createAddBookmark(section);
+      }
     } else {
       const element: any = document.querySelector("[data-addform-visible]");
       element.style.opacity = 0;
