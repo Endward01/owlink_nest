@@ -1,6 +1,6 @@
 export const createNavbarBrand = (parent) => {
     const navbarBrand = document.createElement("div");
-    navbarBrand.classList.add("flex", "justify-between", "items-center", "gap-2", "px-1");
+    navbarBrand.classList.add("flex", "justify-between", "items-center", "gap-2", "px-1", "drop-shadow-(--box-shadow-main)");
     const brandImg = document.createElement("img");
     brandImg.setAttribute("src", "../favicon/favicon-32x32.png");
     brandImg.classList.add("aspect-squer", "h-5/10");

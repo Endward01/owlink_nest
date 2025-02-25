@@ -8,6 +8,7 @@ export const createNavbarBrand = (parent: HTMLElement) => {
     "items-center",
     "gap-2",
     "px-1",
+    "drop-shadow-(--box-shadow-main)",
   );
 
   const brandImg = document.createElement("img");

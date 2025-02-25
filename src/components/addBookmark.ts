@@ -1,10 +1,4 @@
 import { addBookmarkService } from "../services/addBookmarksService.js";
-import {
-  accentColor,
-  bgColor,
-  elemColor,
-  textColor,
-} from "../services/color.js";
 
 export const createAddBookmark = (parent: HTMLElement) => {
   const form: HTMLElement = document.createElement("form");
@@ -14,13 +8,14 @@ export const createAddBookmark = (parent: HTMLElement) => {
   };
 
   form.classList.add(
+    "primary",
+    "back",
     "absolute",
     "flex",
     "flex-col",
     "top-16",
     "right-0",
     "w-xs",
-    "bg-[" + elemColor + "]",
 
     // "bg-(--bg-trans-25)",
     // "backdrop-blur-(--blur-mica)",
@@ -49,9 +44,7 @@ export const createAddBookmark = (parent: HTMLElement) => {
     "p-2",
     "mb-2",
     "rounded-lg",
-    "bg-[" + bgColor + "]",
     "shadow-(--box-shadow-inset-main-50)",
-    "focus:outline-[" + accentColor + "]",
     // "focus-visible:outline",
   );
 
@@ -71,9 +64,9 @@ export const createAddBookmark = (parent: HTMLElement) => {
     "p-2",
     "mb-2",
     "rounded-lg",
-    "bg-[" + bgColor + "]",
+    // "bg-[" + bgColor + "]",
     "shadow-(--box-shadow-inset-main-50)",
-    "focus-visible:outline-[" + textColor + "]",
+    // "focus-visible:outline-[" + textColor + "]",
   );
 
   form.appendChild(urlInput);
@@ -81,15 +74,16 @@ export const createAddBookmark = (parent: HTMLElement) => {
   const addBtm: HTMLElement = document.createElement("input");
 
   addBtm.classList.add(
+    "tertiary",
     "p-2",
     "mt-2",
     "rounded-lg",
-    "bg-[" + bgColor + "]",
-    "active:bg-[" + elemColor + "]",
+    // "bg-[" + bgColor + "]",
+    // "active:bg-[" + elemColor + "]",
 
     "w-7/10",
     "mx-auto",
-    `hover:${textColor}`,
+    // `hover:${textColor}`,
     // "hover:outline",
     // `focus-visible:${textColor}`,
     // "focus-visible:outline",
