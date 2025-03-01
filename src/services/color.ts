@@ -1,7 +1,7 @@
 export const background: string = "#232629";
 export const primary: string = "#1d1c1a";
-export const secondary: string = "#76877D";
-export const accent: string = "#C83E4D";
+export const secondary: string = "#413573";
+export const accent: string = "#c5b84f";
 export const text: string = "#fafaf9";
 
 class colorSheme {
@@ -23,7 +23,7 @@ class colorSheme {
     };
   }
 }
-const newColorSheme = new colorSheme(
+export const newColorSheme = new colorSheme(
   "#232629",
   "#1d1c1a",
   "#485c63",
@@ -31,7 +31,7 @@ const newColorSheme = new colorSheme(
   "#fafaf9",
 );
 
-console.log(newColorSheme.getColor().background);
+// console.log(newColorSheme.getColor().background);
 
 const injectCSS = (css: string) => {
   let el = document.createElement("style");
@@ -53,5 +53,13 @@ injectCSS(
     newColorSheme.getColor().text +
     "; stroke:" +
     newColorSheme.getColor().text +
-    "}",
+    "} .outlineFocus {outline:none; border-bottom: 1px solid;border-color:" +
+    newColorSheme.getColor().text +
+    "} .outlineFocus:focus-visible {border-bottom: 1px solid;box-shadow: 0 -8px 15px -20px " +
+    newColorSheme.getColor().accent +
+    " inset , 0 8px 10px -9px " +
+    newColorSheme.getColor().accent +
+    " ;border-color:" +
+    newColorSheme.getColor().accent +
+    "};",
 );

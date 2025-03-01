@@ -380,10 +380,8 @@
     --bg-trans-25: rgba(0, 0, 0, 0.25);
     --blur-mica: 40px;
     --box-shadow-main: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    --box-shadow-inset-main: 0 0 10px rgba(13, 13, 13, 1) inset,
-        0 0 1px RGBA(0, 0, 0, 1);
-    --box-shadow-inset-main-50: 0 0 5px rgba(13, 13, 13, 1) inset,
-        0 0 1px RGBA(0, 0, 0, 1);
+    --box-shadow-inset-main: 0 0 10px rgba(13, 13, 13, 1) inset, 0 0 1px RGBA(0, 0, 0, 1);
+    --box-shadow-inset-main-50: 0 0 5px rgba(13, 13, 13, 1) inset, 0 0 1px RGBA(0, 0, 0, 1);
     --animate-fade-in-scale: fade-in-scale 0.15s ease-in-out;
     --animate-fade-out-scale: fade-out-scale 0.15s ease-in-out;
   }
@@ -627,9 +625,6 @@
   .h-5\/10 {
     height: calc(5/10 * 100%);
   }
-  .h-8 {
-    height: calc(var(--spacing) * 8);
-  }
   .h-full {
     height: 100%;
   }
@@ -711,9 +706,6 @@
   .justify-start {
     justify-content: flex-start;
   }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
-  }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
@@ -732,6 +724,9 @@
   }
   .bg-\(--bg-trans-25\) {
     background-color: var(--bg-trans-25);
+  }
+  .bg-\[url\(https\:\/\/image\.fonwall\.ru\/o\/oh\/landscape-nature-forest-rock-exbo\.jpeg\?auto\=compress\&fit\=crop\&w\=1920\&h\=1080\&domain\=img1\.fonwall\.ru\)\] {
+    background-image: url(https://image.fonwall.ru/o/oh/landscape-nature-forest-rock-exbo.jpeg?auto=compress&fit=crop&w=1920&h=1080&domain=img1.fonwall.ru);
   }
   .bg-\[url\(https\:\/\/picsum\.photos\/1920\/1080\?blur\)\] {
     background-image: url(https://picsum.photos/1920/1080?blur);
@@ -772,6 +767,9 @@
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
   }
+  .text-blue-500 {
+    color: var(--color-blue-500);
+  }
   .underline {
     text-decoration-line: underline;
   }
@@ -798,8 +796,15 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .outline-transparent {
+    outline-color: transparent;
+  }
   .blur {
     --tw-blur: blur(8px);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .blur-xs {
+    --tw-blur: blur(var(--blur-xs));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .drop-shadow {
@@ -808,26 +813,6 @@
   }
   .drop-shadow-\(--box-shadow-main\) {
     --tw-drop-shadow: drop-shadow(var(--box-shadow-main));
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .drop-shadow-\[\#c83c4c\] {
-    --tw-drop-shadow: drop-shadow(#c83c4c);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .drop-shadow-\[0_35px_35px_rgba\(0\,0\,0\,0\.25\)\] {
-    --tw-drop-shadow: drop-shadow(0 35px 35px rgba(0,0,0,0.25));
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .drop-shadow-\[1px_1px_2px_\#c83c4c\] {
-    --tw-drop-shadow: drop-shadow(1px 1px 2px #c83c4c);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .drop-shadow-\[2px_4px_3px_\#c83c4c\] {
-    --tw-drop-shadow: drop-shadow(2px 4px 3px #c83c4c);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .drop-shadow-lg {
-    --tw-drop-shadow: drop-shadow(var(--drop-shadow-lg));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .filter {
@@ -851,6 +836,10 @@
     --tw-duration: 150ms;
     transition-duration: 150ms;
   }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
@@ -867,11 +856,10 @@
       }
     }
   }
-  .hover\:outline {
+  .hover\:underline {
     &:hover {
       @media (hover: hover) {
-        outline-style: var(--tw-outline-style);
-        outline-width: 1px;
+        text-decoration-line: underline;
       }
     }
   }
@@ -882,6 +870,7 @@
     }
   }
 }
+font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 @keyframes spin {
   to {
     transform: rotate(360deg);

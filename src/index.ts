@@ -5,6 +5,7 @@ import { changeTitle } from "./services/changePageTitle.js";
 import { createAddBookmark } from "./components/addBookmark.js";
 import { createSettings } from "./components/settings.js";
 import { createBackground } from "./components/background.js";
+import { checkLocalStorage } from "./services/localStorageBookmark.js";
 
 export const htmlBody: any = document.querySelector("body");
 htmlBody.classList.add("primary", "h-lvh", "flex");
@@ -34,3 +35,5 @@ createFooter(div);
 createBackground(htmlBody);
 
 changeTitle();
+
+checkLocalStorage();

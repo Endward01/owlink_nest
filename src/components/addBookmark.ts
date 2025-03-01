@@ -1,4 +1,5 @@
 import { addBookmarkService } from "../services/addBookmarksService.js";
+import { newColorSheme } from "../services/color.js";
 
 export const createAddBookmark = (parent: HTMLElement) => {
   const form: HTMLElement = document.createElement("form");
@@ -16,9 +17,6 @@ export const createAddBookmark = (parent: HTMLElement) => {
     "top-16",
     "right-0",
     "w-xs",
-
-    // "bg-(--bg-trans-25)",
-    // "backdrop-blur-(--blur-mica)",
     "p-2",
     "mx-2",
     "rounded-lg",
@@ -43,9 +41,12 @@ export const createAddBookmark = (parent: HTMLElement) => {
   nameInput.classList.add(
     "p-2",
     "mb-2",
-    "rounded-lg",
-    "shadow-(--box-shadow-inset-main-50)",
-    // "focus-visible:outline",
+    // "rounded-lg",
+    // "shadow-(--box-shadow-inset-main-50)",
+    // "outline-transparent",
+    "outlineFocus",
+    "duration-300",
+    "ease-in-out",
   );
 
   form.appendChild(nameInput);
@@ -63,31 +64,27 @@ export const createAddBookmark = (parent: HTMLElement) => {
   urlInput.classList.add(
     "p-2",
     "mb-2",
-    "rounded-lg",
-    // "bg-[" + bgColor + "]",
-    "shadow-(--box-shadow-inset-main-50)",
-    // "focus-visible:outline-[" + textColor + "]",
+    // "rounded-lg",
+    "focus-visible:outline",
+    "outlineFocus",
+    "duration-300",
+    "ease-in-out",
+    // "shadow-(--box-shadow-inset-main-50)",
   );
 
   form.appendChild(urlInput);
 
-  const addBtm: HTMLElement = document.createElement("input");
+  const addBtm: HTMLElement = document.createElement("button");
 
   addBtm.classList.add(
-    "tertiary",
+    // "tertiary",
     "p-2",
     "mt-2",
     "rounded-lg",
-    // "bg-[" + bgColor + "]",
-    // "active:bg-[" + elemColor + "]",
-
     "w-7/10",
     "mx-auto",
-    // `hover:${textColor}`,
-    // "hover:outline",
-    // `focus-visible:${textColor}`,
-    // "focus-visible:outline",
     "cursor-pointer",
+    "active:",
   );
   addBtm.setAttribute("type", "submit");
 
