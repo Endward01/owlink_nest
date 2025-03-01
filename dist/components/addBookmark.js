@@ -15,7 +15,7 @@ export const createAddBookmark = (parent) => {
     nameInput.setAttribute("id", "addName");
     nameInput.setAttribute("name", "addName");
     nameInput.setAttribute("type", "text");
-    nameInput.classList.add("p-2", "mb-2", "rounded-lg", "shadow-(--box-shadow-inset-main-50)");
+    nameInput.classList.add("p-2", "mb-2", "outlineFocus", "duration-300", "ease-in-out");
     form.appendChild(nameInput);
     const urlLabel = document.createElement("label");
     urlLabel.innerText += "Url";
@@ -26,10 +26,10 @@ export const createAddBookmark = (parent) => {
     urlInput.setAttribute("id", "addUrl");
     urlInput.setAttribute("name", "addUrl");
     urlInput.setAttribute("type", "text");
-    urlInput.classList.add("p-2", "mb-2", "rounded-lg", "shadow-(--box-shadow-inset-main-50)");
+    urlInput.classList.add("p-2", "mb-2", "focus-visible:outline", "outlineFocus", "duration-300", "ease-in-out");
     form.appendChild(urlInput);
-    const addBtm = document.createElement("input");
-    addBtm.classList.add("tertiary", "p-2", "mt-2", "rounded-lg", "w-7/10", "mx-auto", "cursor-pointer");
+    const addBtm = document.createElement("button");
+    addBtm.classList.add("p-2", "mt-2", "rounded-lg", "w-7/10", "mx-auto", "cursor-pointer", "active:");
     addBtm.setAttribute("type", "submit");
     addBtm.innerText += "Add Bookmark";
     form.appendChild(addBtm);
