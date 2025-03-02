@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+.link-decoration-none {
+    text-decoration: none;
+    color: unset;
+}
+
 font-family:
     system-ui,
     -apple-system,

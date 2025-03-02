@@ -1,7 +1,7 @@
 export const background = "#232629";
 export const primary = "#1d1c1a";
-export const secondary = "#413573";
-export const accent = "#c5b84f";
+export const secondary = "#4d5860";
+export const accent = "#c83c4c";
 export const text = "#fafaf9";
 class colorSheme {
     constructor(background, primary, secondary, accent, text) {
@@ -28,15 +28,15 @@ const injectCSS = (css) => {
     el.innerText = css;
     document.head.appendChild(el);
 };
-injectCSS(".primary { background-color:" +
+injectCSS(".background { background-color:" +
     newColorSheme.getColor().background +
-    "} .secondary { background-color:" +
+    "} .primary { background-color:" +
     newColorSheme.getColor().primary +
-    "} .tertiary { background-color:" +
-    newColorSheme.getColor().primary +
-    "} .tertiary:hover {  background:" +
+    "} .button:hover,.button:active {  background:" +
+    newColorSheme.getColor().accent +
+    "}.secondary { background-color:" +
     newColorSheme.getColor().secondary +
-    "} .textColor { color: " +
+    "}  .textColor { color: " +
     newColorSheme.getColor().text +
     "; stroke:" +
     newColorSheme.getColor().text +
@@ -48,4 +48,8 @@ injectCSS(".primary { background-color:" +
     newColorSheme.getColor().accent +
     " ;border-color:" +
     newColorSheme.getColor().accent +
-    "};");
+    "} .focus {box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px ; background: " +
+    newColorSheme.getColor().primary +
+    ";} .link:hover {box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px; background: " +
+    newColorSheme.getColor().primary +
+    ";}");
