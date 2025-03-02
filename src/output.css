@@ -540,8 +540,14 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-2 {
+    top: calc(var(--spacing) * 2);
+  }
   .top-16 {
     top: calc(var(--spacing) * 16);
+  }
+  .top-161 {
+    top: calc(var(--spacing) * 161);
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
@@ -587,6 +593,9 @@
   }
   .my-2 {
     margin-block: calc(var(--spacing) * 2);
+  }
+  .my-16 {
+    margin-block: calc(var(--spacing) * 16);
   }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
@@ -649,6 +658,9 @@
   .flex-1\/4 {
     flex: calc(1/4 * 100%);
   }
+  .flex-\[1\] {
+    flex: 1;
+  }
   .flex-grow {
     flex-grow: 1;
   }
@@ -663,12 +675,6 @@
   }
   .basis-1\/4 {
     flex-basis: calc(1/4 * 100%);
-  }
-  .basis-3 {
-    flex-basis: calc(var(--spacing) * 3);
-  }
-  .basis-3\/4 {
-    flex-basis: calc(3/4 * 100%);
   }
   .border-collapse {
     border-collapse: collapse;
@@ -691,14 +697,8 @@
   .flex-col {
     flex-direction: column;
   }
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
   .items-center {
     align-items: center;
-  }
-  .items-start {
-    align-items: flex-start;
   }
   .justify-between {
     justify-content: space-between;
@@ -714,6 +714,9 @@
   }
   .overflow-hidden {
     overflow: hidden;
+  }
+  .overflow-scroll {
+    overflow: scroll;
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
@@ -749,8 +752,17 @@
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
+  }
+  .py-\[2px\] {
+    padding-block: 2px;
   }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
@@ -766,9 +778,6 @@
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
-  }
-  .text-blue-500 {
-    color: var(--color-blue-500);
   }
   .underline {
     text-decoration-line: underline;
@@ -849,18 +858,14 @@
       margin-bottom: calc(var(--spacing) * 2);
     }
   }
-  .hover\:bg-red-500 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-red-500);
-      }
+  .empty\:hidden {
+    &:empty {
+      display: none;
     }
   }
-  .hover\:underline {
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-line: underline;
-      }
+  .empty\:w-\[0px\] {
+    &:empty {
+      width: 0px;
     }
   }
   .focus-visible\:outline {
@@ -869,6 +874,10 @@
       outline-width: 1px;
     }
   }
+}
+.link-decoration-none {
+  text-decoration: none;
+  color: unset;
 }
 font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 @keyframes spin {

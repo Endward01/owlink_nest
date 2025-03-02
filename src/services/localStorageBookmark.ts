@@ -3,8 +3,9 @@ export const checkLocalStorage = () => {
     if (localStorage.getItem("bookmarks") === null) {
       const bookmarks: JSON[] = [];
       localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+      console.warn("LocalStorage initialized");
     } else {
-      // console.table(JSON.parse(localStorage.getItem("bookmarks")));
+      console.warn("LocalStorage already initialized");
     }
     return true;
   } catch (error) {

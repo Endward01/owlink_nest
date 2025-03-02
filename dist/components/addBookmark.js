@@ -1,10 +1,10 @@
-import { addBookmarkService } from "../services/addBookmarksService.js";
+import { createNewBookmark } from "../services/createNewBookmark.js";
 export const createAddBookmark = (parent) => {
     const form = document.createElement("form");
     form.onsubmit = (event) => {
-        addBookmarkService(nameInput, urlInput, event);
+        createNewBookmark(nameInput, urlInput, columnInput, folderInput, event);
     };
-    form.classList.add("primary", "back", "absolute", "flex", "flex-col", "top-16", "right-0", "w-xs", "p-2", "mx-2", "rounded-lg", "shadow-(--box-shadow-main)", "transition", "ease-in-out", "duration-150", "animate-(--animate-fade-in-scale)");
+    form.classList.add("primary", "back", "absolute", "flex", "flex-col", "right-0", "w-xs", "p-2", "mx-2", "rounded-lg", "shadow-(--box-shadow-main)", "transition", "ease-in-out", "duration-150", "animate-(--animate-fade-in-scale)");
     form.setAttribute("data-addForm-visible", "");
     const nameLabel = document.createElement("label");
     nameLabel.innerText += "Title";
@@ -28,8 +28,25 @@ export const createAddBookmark = (parent) => {
     urlInput.setAttribute("type", "text");
     urlInput.classList.add("p-2", "mb-2", "focus-visible:outline", "outlineFocus", "duration-300", "ease-in-out");
     form.appendChild(urlInput);
+    const columnLabel = document.createElement("label");
+    columnLabel.innerText += "Column";
+    columnLabel.setAttribute("for", "addUrl");
+    columnLabel.classList.add("pl-2");
+    form.appendChild(columnLabel);
+    const columnInput = document.createElement("select");
+    columnInput.setAttribute("id", "addColumn");
+    columnInput.setAttribute("name", "addColumn");
+    columnInput.setAttribute("type", "text");
+    columnInput.classList.add("p-2", "mb-2", "focus-visible:outline", "outlineFocus", "duration-300", "ease-in-out");
+    for (let i = 0; i <= 4; i++) {
+        const option = document.createElement("option");
+        option.value = i.toString();
+        option.innerText = (i + 1).toString();
+        columnInput.appendChild(option);
+    }
+    form.appendChild(columnInput);
     const addBtm = document.createElement("button");
-    addBtm.classList.add("p-2", "mt-2", "rounded-lg", "w-7/10", "mx-auto", "cursor-pointer", "active:");
+    addBtm.classList.add("secondary", "button", "p-2", "mt-2", "rounded-lg", "w-7/10", "mx-auto", "cursor-pointer", "active:");
     addBtm.setAttribute("type", "submit");
     addBtm.innerText += "Add Bookmark";
     form.appendChild(addBtm);

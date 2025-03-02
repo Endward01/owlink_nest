@@ -6,9 +6,10 @@ import { createAddBookmark } from "./components/addBookmark.js";
 import { createSettings } from "./components/settings.js";
 import { createBackground } from "./components/background.js";
 import { checkLocalStorage } from "./services/localStorageBookmark.js";
+import { arrowNavigation } from "./services/arrowNavigation.js";
 
 export const htmlBody: any = document.querySelector("body");
-htmlBody.classList.add("primary", "h-lvh", "flex");
+htmlBody.classList.add("background", "h-lvh", "flex");
 export const div: HTMLElement = document.createElement("div");
 div.classList.add(
   "flex",
@@ -29,6 +30,8 @@ div.classList.add(
 );
 htmlBody.appendChild(div);
 
+checkLocalStorage();
+
 createNavbar(div);
 createSection(div);
 createFooter(div);
@@ -36,4 +39,4 @@ createBackground(htmlBody);
 
 changeTitle();
 
-checkLocalStorage();
+arrowNavigation();
